@@ -3,9 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SportDataHub — Спортивна Аналітика</title>
+    <title>SportDataHub — Легка Атлетика</title>
+    <link class="styles" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    
+
+<header class="main header">
+<h1><i class="fa-solid fa-person-running"></i> SportData<span>Hub</span></h1>
+<p>Аналітика легкої атлетики</p>
+</header>
+
+<div class="page-body">
+
+<aside class="sidebar">
+<nav class="menu">
+<a href="#" class="menu-item active"><i class="fa-solid fa-house"></i> Дашборд</a>
+<a href="#" class="menu-item"><i class="fa-solid fa-stopwatch"></i> Спринт</a>
+<a href="#" class="menu-item"><i class="fa-solid fa-arrows-up-to-line"></i> Стрибки</a>
+</nav>
+</aside>
+
+<main class="main-content">
+
+<section class="results-section">
+<h2>Останні забіги (API)</h2>
+<p>Дані завантажуються в реальному часі з безкоштовного спортивного джерела.</p>
+
+<article class="result-card">
+<h3>Діамантова ліга — 100м</h3>
+<p>Усейн Болт - <strong>9.58 с</strong></p>
+</article>
+</section>
+
+<section class="charts-section">
+<h2>Інфографіка швидкосі</h2>
+<figure class="chart-box">
+<figcaption>Графік рогону атлета на дистанції</figcaption>
+<canvas id="speedchart"></canvas>
+</figure>
+</section>
+</main>
+</div>
+
+<footer class="main-footer">
+<p class="footer-logo">
+<i class="fa-solid fa-person-running"></i> SportData<span>Hub</span>
+</p>
+
+<nav class="footer-links">
+<a href="#">Контакти</a>
+<a href="#">Джерела API</a>
+<a href="#">Підтримка</a>
+</nav>
+
+<p class="copyright">
+&copy; 2026 SportDataHub. Усі права захищено. Спортивна статистика оновлюється в реальному часі.
+</p>
+</footer>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
