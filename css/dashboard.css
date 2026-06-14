@@ -1,0 +1,57 @@
+.main-content {
+    flex: 1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+
+.results-section h2,
+.charts-section h2 {
+    font-size: 22px;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.results-section p {
+    color: #747d8c;
+    margin-bottom: 20px;
+    font-size: 15px;
+}
+
+.result-card, 
+.chart-box {
+    background-color: #18181c;
+    padding: 25px;
+    border-radius: 16px;
+    border: 1px solid #292930;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.result-card h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.result-card p {
+    color: #a4b0be;
+    font-size: 16px;
+}
+
+.result-card strong {
+    color: #ff4757;
+    font-size: 18px;
+    margin-left: 5px;
+}
+
+.chart-box figcaption {
+    color: #747d8c;
+    font-size: 14px;
+    margin-bottom: 20px;
+    font-style: italic;
+}
+
+#speedchart {
+    max-height: 340px;
+    width: 100% !important;
+}

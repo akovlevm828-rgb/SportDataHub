@@ -1,0 +1,76 @@
+/* --- ШАПКА САЙТУ --- */
+.main.header {
+    background-color: #18181c;
+    padding: 25px 20px;
+    text-align: center;
+    border-bottom: 1px solid #292930;
+}
+
+.main.header h1 {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 5px;
+    letter-spacing: 0.5px;
+}
+
+.main.header h1 i {
+    color: #ff4757; /* Червоний акцент для іконки бігуна */
+    margin-right: 10px;
+}
+
+.main.header h1 span {
+    color: #ff4757; /* Червоне виділення слова Hub */
+}
+
+.main.header p {
+    color: #a4b0be;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* --- ГОЛОВНА СІТКА (LAYOUT) --- */
+.page-body {
+    display: flex; /* Розставляє бічну панель та контент в один ряд */
+    min-height: calc(100vh - 210px); /* Розтягує сайт на всю висоту екрана */
+}
+
+/* --- ПІДВАЛ САЙТУ --- */
+.main-footer {
+    background-color: #18181c;
+    padding: 40px 20px;
+    text-align: center;
+    border-top: 1px solid #292930;
+}
+
+.footer-logo {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.footer-logo i,
+.footer-logo span {
+    color: #ff4757;
+}
+
+.footer-links {
+    margin-bottom: 25px;
+}
+
+.footer-links a {
+    color: #a4b0be;
+    margin: 0 15px;
+    font-size: 15px;
+    transition: color 0.25s ease;
+}
+
+.footer-links a:hover {
+    color: #ff4757; /* Червоніють при наведенні курсора */
+}
+
+.copyright {
+    color: #57606f;
+    font-size: 13px;
+    letter-spacing: 0.3px;
+}
