@@ -1,0 +1,107 @@
+/* ==========================================
+   CALCULATOR — форма та "забіг по доріжках"
+   ========================================== */
+
+.calc-box {
+    background-color: var(--bg-panel);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    padding: 32px;
+}
+
+.calc-form {
+    display: grid;
+    grid-template-columns: 2fr 2fr 1.4fr auto;
+    gap: 16px;
+    align-items: end;
+}
+
+.calc-field {
+    margin: 0;
+}
+
+.calc-field label {
+    display: block;
+    font-size: 12px;
+    color: var(--ink-muted);
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.calc-field select, .calc-field input {
+    width: 100%;
+    background-color: var(--bg-void);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 12px 14px;
+    color: var(--chalk);
+    font-size: 14px;
+    outline: none;
+}
+.calc-field select:focus, .calc-field input:focus { border-color: var(--track-red); }
+
+#calcBtn { height: 46px; }
+
+/* LANE RACE VISUAL (тепер <table>) */
+.lane-race {
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin-top: 36px;
+    padding-top: 28px;
+    border-top: 1px solid var(--line);
+}
+
+.lane-race td {
+    padding: 8px 0;
+    vertical-align: middle;
+}
+
+.lane-name {
+    width: 140px;
+    font-size: 13px;
+    color: var(--ink-muted);
+    padding-right: 16px;
+}
+
+.lane-track {
+    height: 14px;
+    background-color: var(--bg-void);
+    border-radius: 7px;
+    overflow: hidden;
+    border: 1px solid var(--line);
+}
+
+.lane-fill {
+    height: 100%;
+    width: 0%;
+    border-radius: 7px;
+    transition: width 1.1s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.lane-fill.wr { background-color: var(--led-amber); }
+.lane-fill.user { background-color: var(--track-red); }
+
+.lane-value {
+    width: 70px;
+    text-align: right;
+    font-family: var(--font-mono);
+    font-size: 13px;
+    padding-left: 16px;
+}
+
+.calc-result {
+    margin-top: 20px;
+    font-size: 15px;
+    color: var(--chalk);
+    background-color: var(--track-red-dim);
+    border-left: 3px solid var(--track-red);
+    padding: 14px 18px;
+    border-radius: 8px;
+}
+
+@media (max-width: 720px) {
+    .calc-form { grid-template-columns: 1fr; }
+    .lane-name { width: 100px; font-size: 12px; }
+}

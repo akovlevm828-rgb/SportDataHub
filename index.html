@@ -1,69 +1,165 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SportDataHub — Легка Атлетика</title>
-    <link class="styles" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
-    <link rel="stylesheet" href="css/style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SportDataHub — Світ легкої атлетики у цифрах</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/layout.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/calculator.css">
+<link rel="stylesheet" href="css/animations.css">
 </head>
-
 <body>
 
-<header class="main header">
-<h1><i class="fa-solid fa-person-running"></i> SportData<span>Hub</span></h1>
-<p>Аналітика легкої атлетики</p>
+<header class="site-header" id="top">
+    <a class="logo" href="#top">
+        <i class="fa-solid fa-person-running"></i>
+        <span>Sport<span class="accent">Data</span>Hub</span>
+    </a>
+    <nav class="main-nav" id="mainNav">
+        <a href="#records" data-lane="1"><span class="lane-tag">1</span>Рекорди</a>
+        <a href="#progress" data-lane="2"><span class="lane-tag">2</span>Прогрес</a>
+        <a href="#calculator" data-lane="3"><span class="lane-tag">3</span>Порівняти себе</a>
+        <a href="#legends" data-lane="4"><span class="lane-tag">4</span>Легенди</a>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="Меню"><i class="fa-solid fa-bars"></i></button>
 </header>
 
-<div class="page-body">
+<main>
 
-<aside class="sidebar">
-<nav class="menu">
-<a href="#" class="menu-item active"><i class="fa-solid fa-house"></i> Дашборд</a>
-<a href="#" class="menu-item"><i class="fa-solid fa-stopwatch"></i> Спринт</a>
-<a href="#" class="menu-item"><i class="fa-solid fa-arrows-up-to-line"></i> Стрибки</a>
-</nav>
-</aside>
+    <!-- HERO -->
+    <section class="hero">
+        <p class="eyebrow">World Athletics Data · оновлено 2026</p>
+        <h1 class="hero-title">9.58 секунди<br>розділяють людину<br>і легенду</h1>
+        <output class="stopwatch" id="stopwatch">
+            <span class="sw-digits" id="swDigits">0.00</span>
+            <span class="sw-caption" id="swCaption">розганяємось…</span>
+        </output>
+        <p class="hero-sub">Світові рекорди легкої атлетики, історія їх прогресу та інструмент, який покаже наскільки твій власний результат близький до межі людських можливостей.</p>
+        <nav class="hero-cta" aria-label="Швидкі дії">
+            <a href="#records" class="btn btn-primary">Дивитись рекорди</a>
+            <a href="#calculator" class="btn btn-ghost">Порівняти свій результат</a>
+        </nav>
+    </section>
 
-<main class="main-content">
+    <!-- QUICK FACTS -->
+    <ul class="facts-strip">
+        <li class="fact"><span class="fact-num">38</span><span class="fact-label">років тримався рекорд молота</span></li>
+        <li class="fact"><span class="fact-num">35</span><span class="fact-label">рекордів встановив Сергій Бубка</span></li>
+        <li class="fact"><span class="fact-num">2</span><span class="fact-label">рекорди побито в марафоні навесні 2026</span></li>
+        <li class="fact"><span class="fact-num">37</span><span class="fact-label">років простояв рекорд у висоту до Магучіх</span></li>
+    </ul>
 
-<section class="results-section">
-<h2>Останні забіги (API)</h2>
-<p>Дані завантажуються в реальному часі з безкоштовного спортивного джерела.</p>
+    <!-- RECORDS -->
+    <section class="section" id="records">
+        <header class="section-head">
+            <span class="lane-label">Доріжка 1</span>
+            <h2>Світові рекорди</h2>
+            <p class="section-sub">Оберіть статеву категорію та дисципліну, щоб побачити чинні рекорди World Athletics.</p>
+        </header>
 
-<article class="result-card">
-<h3>Діамантова ліга — 100м</h3>
-<p>Усейн Болт - <strong>9.58 с</strong></p>
-</article>
-</section>
+        <menu class="controls">
+            <li>
+                <menu class="toggle-group" id="genderToggle">
+                    <li><button class="toggle-btn active" data-gender="men">Чоловіки</button></li>
+                    <li><button class="toggle-btn" data-gender="women">Жінки</button></li>
+                </menu>
+            </li>
+            <li>
+                <menu class="tab-group" id="categoryTabs">
+                    <li><button class="tab-btn active" data-cat="sprint">Спринт</button></li>
+                    <li><button class="tab-btn" data-cat="middle_long">Витривалість</button></li>
+                    <li><button class="tab-btn" data-cat="jumps">Стрибки</button></li>
+                    <li><button class="tab-btn" data-cat="throws">Метання</button></li>
+                    <li><button class="tab-btn" data-cat="combined">Багатоборʼя</button></li>
+                </menu>
+            </li>
+        </menu>
 
-<section class="charts-section">
-<h2>Інфографіка швидкосі</h2>
-<figure class="chart-box">
-<figcaption>Графік рогону атлета на дистанції</figcaption>
-<canvas id="speedchart"></canvas>
-</figure>
-</section>
+        <ul class="records-grid" id="recordsGrid"></ul>
+    </section>
+
+    <!-- PROGRESSION CHART -->
+    <section class="section alt" id="progress">
+        <header class="section-head">
+            <span class="lane-label">Доріжка 2</span>
+            <h2>Як падав рекорд на 100 метрів</h2>
+            <p class="section-sub">Від 9.95 Джима Хайнса у 1968 до 9.58 Усейна Болта у 2009 — понад 40 років боротьби за соті секунди.</p>
+        </header>
+        <figure class="chart-panel">
+            <canvas id="progressChart"></canvas>
+            <figcaption>Динаміка світового рекорду на 100м серед чоловіків, 1968–2009</figcaption>
+        </figure>
+    </section>
+
+    <!-- CALCULATOR -->
+    <section class="section" id="calculator">
+        <header class="section-head">
+            <span class="lane-label">Доріжка 3</span>
+            <h2>Порівняй свій результат</h2>
+            <p class="section-sub">Введи свій час або результат — побачиш, як він виглядає поруч зі світовим рекордом.</p>
+        </header>
+
+        <div class="calc-box">
+            <form class="calc-form" id="calcForm" onsubmit="return false;">
+                <p class="calc-field">
+                    <label for="calcEvent">Дисципліна</label>
+                    <select id="calcEvent"></select>
+                </p>
+                <p class="calc-field">
+                    <label for="calcGender">Категорія рекорду</label>
+                    <select id="calcGender">
+                        <option value="men">Чоловічий рекорд</option>
+                        <option value="women">Жіночий рекорд</option>
+                    </select>
+                </p>
+                <p class="calc-field">
+                    <label id="calcValueLabel" for="calcValue">Твій час (сек)</label>
+                    <input type="number" id="calcValue" step="0.01" placeholder="напр. 13.5" />
+                </p>
+                <button class="btn btn-primary" id="calcBtn" type="button">Порівняти</button>
+            </form>
+
+            <table class="lane-race" id="laneRace" style="display:none;">
+                <tbody>
+                    <tr>
+                        <td class="lane-name">Світовий рекорд</td>
+                        <td class="lane-track"><div class="lane-fill wr" id="wrFill"></div></td>
+                        <td class="lane-value" id="wrValueLabel"></td>
+                    </tr>
+                    <tr>
+                        <td class="lane-name">Твій результат</td>
+                        <td class="lane-track"><div class="lane-fill user" id="userFill"></div></td>
+                        <td class="lane-value" id="userValueLabel"></td>
+                    </tr>
+                </tbody>
+            </table>
+            <p class="calc-result" id="calcResultText"></p>
+        </div>
+    </section>
+
+    <!-- LEGENDS -->
+    <section class="section alt" id="legends">
+        <header class="section-head">
+            <span class="lane-label">Доріжка 4</span>
+            <h2>Легенди атлетики</h2>
+            <p class="section-sub">Люди, які кілька разів перевизначали межі можливого.</p>
+        </header>
+        <ul class="legends-grid" id="legendsGrid"></ul>
+    </section>
+
 </main>
-</div>
 
-<footer class="main-footer">
-<p class="footer-logo">
-<i class="fa-solid fa-person-running"></i> SportData<span>Hub</span>
-</p>
-
-<nav class="footer-links">
-<a href="#">Контакти</a>
-<a href="#">Джерела API</a>
-<a href="#">Підтримка</a>
-</nav>
-
-<p class="copyright">
-&copy; 2026 SportDataHub. Усі права захищено. Спортивна статистика оновлюється в реальному часі.
-</p>
+<footer class="site-footer">
+    <p class="footer-logo"><i class="fa-solid fa-person-running"></i> Sport<span class="accent">Data</span>Hub</p>
+    <p class="footer-note">Дані зібрані з відкритих джерел World Athletics, станом на 2026 рік. Навчальний проєкт.</p>
 </footer>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
-<script type="module" src="js/script.js"></script>
+<script type="module" src="js/main.js"></script>
 </body>
 </html>

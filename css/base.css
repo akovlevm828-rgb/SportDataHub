@@ -1,18 +1,56 @@
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+/* ==========================================
+   BASE — токени дизайну, ресети, типографіка
+   ========================================== */
+
+:root {
+    --bg-void: #0b0c0e;
+    --bg-panel: #15171a;
+    --bg-panel-2: #1b1e22;
+    --track-red: #d8431f;
+    --track-red-dim: rgba(216, 67, 31, 0.14);
+    --chalk: #f4f1e9;
+    --led-amber: #ffb238;
+    --signal-green: #3ddc84;
+    --ink-muted: #8b9098;
+    --line: #26292d;
+
+    --font-display: 'Bebas Neue', Impact, 'Arial Narrow', sans-serif;
+    --font-body: 'Inter', -apple-system, 'Segoe UI', Roboto, sans-serif;
+    --font-mono: 'JetBrains Mono', 'Courier New', monospace;
 }
 
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
 body {
-    background-color: #0e0e10;
-    color: #ffffff;
-    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--bg-void);
+    color: var(--chalk);
+    font-family: var(--font-body);
     line-height: 1.6;
     overflow-x: hidden;
 }
 
-a {
-    color: inherit;
-    text-decoration: none;
+a { color: inherit; text-decoration: none; }
+
+h1, h2, h3 {
+    font-family: var(--font-display);
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    line-height: 1.05;
+}
+
+.accent { color: var(--track-red); }
+
+button, select, input {
+    font-family: var(--font-body);
+}
+
+:focus-visible {
+    outline: 2px solid var(--led-amber);
+    outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * { animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
 }
