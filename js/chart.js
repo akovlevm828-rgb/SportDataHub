@@ -4,8 +4,6 @@ export function initProgressChart() {
     const canvas = document.getElementById('progressChart');
     const ctx = canvas.getContext('2d');
 
-    // Захист від помилки "Canvas is already in use" —
-    // якщо графік на цьому canvas вже існує, видаляємо його перед створенням нового
     const existing = Chart.getChart(canvas);
     if (existing) existing.destroy();
 
