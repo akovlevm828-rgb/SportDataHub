@@ -1,7 +1,3 @@
-// ==========================================
-//  CALCULATOR — порівняння результату користувача зі світовим рекордом
-// ==========================================
-
 import { calcEvents } from './data.js';
 
 export function initCalculator() {
@@ -11,7 +7,6 @@ export function initCalculator() {
     const valueLabel = document.getElementById('calcValueLabel');
     const btn = document.getElementById('calcBtn');
 
-    // Заповнюємо список дисциплін
     eventSelect.innerHTML = calcEvents.map(e => `<option value="${e.id}">${e.label}</option>`).join('');
 
     function updateLabel() {
@@ -47,7 +42,7 @@ function runRace(ev, wr, userVal) {
 
     laneRace.style.display = 'table';
 
-    let ratio; // % близькості до рекорду
+    let ratio;
     if (ev.type === 'time') {
         ratio = (wr / userVal) * 100;
         wrLabel.textContent = `${wr}с`;
@@ -60,7 +55,6 @@ function runRace(ev, wr, userVal) {
 
     const cappedRatio = Math.min(ratio, 100);
 
-    // Анімація заповнення доріжок
     wrFill.style.width = '0%';
     userFill.style.width = '0%';
     requestAnimationFrame(() => {
@@ -70,7 +64,6 @@ function runRace(ev, wr, userVal) {
         }, 50);
     });
 
-    // Текст результату
     if (ratio >= 100) {
         resultText.textContent = `🤯 Це було б новим світовим рекордом! Перевір введені дані — або ти справді неймовірний атлет.`;
     } else if (ratio >= 95) {

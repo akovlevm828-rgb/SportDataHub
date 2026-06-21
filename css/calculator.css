@@ -1,7 +1,3 @@
-/* ==========================================
-   CALCULATOR — форма та "забіг по доріжках"
-   ========================================== */
-
 .calc-box {
     background-color: var(--bg-panel);
     border: 1px solid var(--line);
@@ -43,7 +39,6 @@
 
 #calcBtn { height: 46px; }
 
-/* LANE RACE VISUAL (тепер <table>) */
 .lane-race {
     width: 100%;
     table-layout: fixed;

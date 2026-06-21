@@ -1,8 +1,3 @@
-// ==========================================
-//  SportDataHub — Головний файл (entry point)
-//  Жодного API, жодного бекенду — все працює локально
-// ==========================================
-
 import { initStopwatch } from './hero.js';
 import { initNav } from './nav.js';
 import { initRecords } from './records.js';

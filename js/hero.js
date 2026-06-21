@@ -1,18 +1,13 @@
-// ==========================================
-//  HERO — анімація секундоміра при завантаженні
-// ==========================================
-
 export function initStopwatch() {
     const digits = document.getElementById('swDigits');
     const caption = document.getElementById('swCaption');
-    const target = 9.58; // Світовий рекорд 100м
-    const duration = 1400; // ms
+    const target = 9.58;
+    const duration = 1400;
     const start = performance.now();
 
     function tick(now) {
         const elapsed = now - start;
         const progress = Math.min(elapsed / duration, 1);
-        // Easing — швидкий старт, повільне уповільнення (як справжній забіг)
         const eased = 1 - Math.pow(1 - progress, 3);
         const current = eased * target;
         digits.textContent = current.toFixed(2);

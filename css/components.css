@@ -1,8 +1,3 @@
-/* ==========================================
-   COMPONENTS — кнопки, картки, перемикачі, годинник
-   ========================================== */
-
-/* BUTTONS */
 .btn {
     display: inline-block;
     padding: 13px 26px;
@@ -27,7 +22,6 @@
 }
 .btn-ghost:hover { border-color: var(--track-red); color: var(--track-red); }
 
-/* STOPWATCH (hero centerpiece) */
 .stopwatch {
     margin: 0 auto;
     width: fit-content;
@@ -57,7 +51,6 @@
     letter-spacing: 1px;
 }
 
-/* CONTROLS: toggle + tabs (тепер <menu>, потребує list-style reset) */
 .controls {
     display: flex;
     flex-wrap: wrap;
@@ -100,7 +93,6 @@
     color: var(--chalk);
 }
 
-/* RECORD CARDS */
 .records-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -169,7 +161,6 @@
     letter-spacing: 0.5px;
 }
 
-/* LEGENDS GRID */
 .legends-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));

@@ -1,7 +1,3 @@
-// ==========================================
-//  CHART — графік прогресії рекорду 100м
-// ==========================================
-
 import { progression100m } from './data.js';
 
 export function initProgressChart() {

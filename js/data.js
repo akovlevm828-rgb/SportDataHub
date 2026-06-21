@@ -1,8 +1,3 @@
-// ==========================================
-//  SportDataHub — Дані світових рекордів
-//  Станом на середину 2026 року, World Athletics
-// ==========================================
-
 export const records = {
     men: {
         sprint: [
@@ -74,7 +69,6 @@ export const categoryLabels = {
     combined: 'Багатоборʼя',
 };
 
-// Прогресія світового рекорду на 100м (чоловіки) — реальна історія
 export const progression100m = [
     { year: 1968, time: 9.95, athlete: 'Джим Хайнс' },
     { year: 1983, time: 9.93, athlete: 'Келвін Сміт' },
@@ -89,7 +83,6 @@ export const progression100m = [
     { year: 2009, time: 9.58, athlete: 'Усейн Болт' },
 ];
 
-// Дані для калькулятора порівняння
 export const calcEvents = [
     { id: '100m', label: '100 метрів', type: 'time', men: 9.58, women: 10.49 },
     { id: '200m', label: '200 метрів', type: 'time', men: 19.19, women: 21.34 },
@@ -99,7 +92,6 @@ export const calcEvents = [
     { id: 'longjump', label: 'Стрибок у довжину', type: 'distance', men: 8.95, women: 7.52 },
 ];
 
-// Легенди легкої атлетики
 export const legends = [
     {
         name: 'Усейн Болт',
